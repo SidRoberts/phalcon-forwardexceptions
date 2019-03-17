@@ -20,10 +20,13 @@ Install using Composer:
 You'll need to add the event to the `dispatcher` DI service:
 
 ```php
+use Exception;
+use Phalcon\Mvc\Dispatcher;
+
 $di->set(
     "dispatcher",
     function () use ($di) {
-        $dispatcher = new \Phalcon\Mvc\Dispatcher();
+        $dispatcher = new Dispatcher();
 
         // ...
 
@@ -36,7 +39,7 @@ $di->set(
          * which has access to the DI.
          */
         $callbacks = [
-            "flash" => function (\Exception $e) {
+            "flash" => function (Exception $e) {
                 $this->flash->error($e->getMessage());
             }
         ];
@@ -67,7 +70,10 @@ In this example, if an Exception is thrown in `ExampleController::loginSubmitAct
 ### Controller ###
 
 ```php
-class ExampleController extends \Phalcon\Mvc\Controller
+use Exception;
+use Phalcon\Mvc\Controller;
+
+class ExampleController extends Controller
 {
     public function loginAction()
     {
@@ -82,7 +88,7 @@ class ExampleController extends \Phalcon\Mvc\Controller
         // ...
 
         if (!$success) {
-            throw new \Exception($errorMessage);
+            throw new Exception($errorMessage);
         }
     }
 }
