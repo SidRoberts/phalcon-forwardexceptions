@@ -15,9 +15,6 @@ class Event extends Plugin
 
 
 
-    /**
-     * @param array $calbacks
-     */
     public function __construct(array $callbacks = [])
     {
         $this->callbacks = $callbacks;
@@ -26,10 +23,6 @@ class Event extends Plugin
 
 
     /**
-     * @param \Phalcon\Events\Event $event
-     * @param DispatcherInterface   $dispatcher
-     * @param Exception             $exception
-     *
      * @return boolean
      */
     public function beforeException(\Phalcon\Events\Event $event, DispatcherInterface $dispatcher, Exception $exception)
