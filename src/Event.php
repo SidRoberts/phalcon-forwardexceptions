@@ -54,7 +54,10 @@ class Event extends Plugin
 
             foreach ($callbackNames as $callbackName) {
                 if (isset($this->callbacks[$callbackName])) {
-                    $closure = \Closure::bind($this->callbacks[$callbackName], $this);
+                    $closure = \Closure::bind(
+                        $this->callbacks[$callbackName],
+                        $this
+                    );
 
                     $closure($exception);
                 }

@@ -40,7 +40,9 @@ $di->set(
          */
         $callbacks = [
             "flash" => function (Exception $e) {
-                $this->flash->error($e->getMessage());
+                $this->flash->error(
+                    $e->getMessage()
+                );
             }
         ];
 
