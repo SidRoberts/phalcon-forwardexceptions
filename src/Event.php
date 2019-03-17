@@ -22,10 +22,7 @@ class Event extends Plugin
 
 
 
-    /**
-     * @return boolean
-     */
-    public function beforeException(\Phalcon\Events\Event $event, DispatcherInterface $dispatcher, Exception $exception)
+    public function beforeException(\Phalcon\Events\Event $event, DispatcherInterface $dispatcher, Exception $exception) : bool
     {
         $methodAnnotations = $this->annotations->getMethod(
             $dispatcher->getHandlerClass(),
