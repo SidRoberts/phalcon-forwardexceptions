@@ -67,7 +67,9 @@ $di->set(
 
 ## Example ##
 
-In this example, if an Exception is thrown in `ExampleController::loginSubmitAction()`, it will be forwarded to `ExampleController::loginAction()`. The second Annotation parameter says which callbacks should be called. In this example, the "flash" callback will be run.
+In this example, if an Exception is thrown in `ExampleController::loginSubmitAction()`, it will be forwarded to `ExampleController::loginAction()`.
+The second Annotation parameter says which callbacks should be called.
+In this example, the "flash" callback will be run.
 
 ### Controller ###
 
