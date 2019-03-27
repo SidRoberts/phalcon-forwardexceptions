@@ -5,6 +5,13 @@ Forward Exceptions within a Phalcon controller to an action of your choosing.
 
 
 
+[![License](https://img.shields.io/github/license/SidRoberts/phalcon-forwardexceptions.svg?style=for-the-badge)]()
+
+[![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/phalcon-forwardexceptions.svg?style=for-the-badge)]()
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/phalcon-forwardexceptions.svg?style=for-the-badge)]()
+
+
+
 ## Installing ##
 
 Install using Composer:
