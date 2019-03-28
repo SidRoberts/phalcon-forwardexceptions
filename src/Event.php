@@ -4,6 +4,7 @@ namespace Sid\Phalcon\ForwardExceptions;
 
 use Exception;
 use Phalcon\DispatcherInterface;
+use Phalcon\Events\Event as PhalconEvent;
 use Phalcon\Mvc\User\Plugin;
 
 class Event extends Plugin
@@ -22,7 +23,7 @@ class Event extends Plugin
 
 
 
-    public function beforeException(\Phalcon\Events\Event $event, DispatcherInterface $dispatcher, Exception $exception) : bool
+    public function beforeException(PhalconEvent $event, DispatcherInterface $dispatcher, Exception $exception) : bool
     {
         $methodAnnotations = $this->annotations->getMethod(
             $dispatcher->getHandlerClass(),
