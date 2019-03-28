@@ -5,7 +5,7 @@ Forward Exceptions within a Phalcon controller to an action of your choosing.
 
 
 
-[![Build Status](https://img.shields.io/travis/SidRoberts/phalcon-fowardexceptions/master.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/phalcon-fowardexceptions)
+[![Build Status](https://img.shields.io/travis/SidRoberts/phalcon-forwardexceptions/master.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/phalcon-forwardexceptions)
 
 [![License](https://img.shields.io/github/license/SidRoberts/phalcon-forwardexceptions.svg?style=for-the-badge)]()
 
