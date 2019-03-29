@@ -45,14 +45,16 @@ class Event extends Plugin
             $callbackNames = $annotation->getArgument(1);
 
             foreach ($callbackNames as $callbackName) {
-                if (isset($this->callbacks[$callbackName])) {
-                    $closure = Closure::bind(
-                        $this->callbacks[$callbackName],
-                        $this
-                    );
-
-                    $closure($exception);
+                if (!isset($this->callbacks[$callbackName])) {
+                    continue;
                 }
+
+                $closure = Closure::bind(
+                    $this->callbacks[$callbackName],
+                    $this
+                );
+
+                $closure($exception);
             }
         }
 
