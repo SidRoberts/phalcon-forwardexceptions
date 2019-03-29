@@ -2,6 +2,7 @@
 
 namespace Sid\Phalcon\ForwardExceptions;
 
+use Closure;
 use Exception;
 use Phalcon\DispatcherInterface;
 use Phalcon\Events\Event as PhalconEvent;
@@ -45,7 +46,7 @@ class Event extends Plugin
 
             foreach ($callbackNames as $callbackName) {
                 if (isset($this->callbacks[$callbackName])) {
-                    $closure = \Closure::bind(
+                    $closure = Closure::bind(
                         $this->callbacks[$callbackName],
                         $this
                     );
