@@ -1,5 +1,8 @@
 <?php
 
+namespace Tests;
+
+use Exception;
 use Phalcon\Mvc\Controller;
 
 class SimpleController extends Controller

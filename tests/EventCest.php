@@ -1,16 +1,14 @@
 <?php
 
-namespace Sid\Phalcon\ForwardExceptions\Test\Unit;
-
-use Codeception\TestCase\Test;
+namespace Tests;
 
 use Exception;
 use Phalcon\Di\FactoryDefault;
 use Phalcon\Mvc\Dispatcher;
 
-class EventTest extends Test
+class EventCest
 {
-    public function testActionForwardsToAnother()
+    public function actionForwardsToAnother(UnitTester $I)
     {
         $di = new FactoryDefault();
 
@@ -28,6 +26,8 @@ class EventTest extends Test
 
                 $dispatcher->setEventsManager($eventsManager);
 
+                $dispatcher->setDefaultNamespace("Tests\\");
+
                 return $dispatcher;
             },
             true
@@ -42,7 +42,7 @@ class EventTest extends Test
 
         $controller = $dispatcher->dispatch();
 
-        $this->assertEquals(
+        $I->assertEquals(
             "two",
             $dispatcher->getActionName()
         );
