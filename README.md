@@ -1,5 +1,4 @@
-Sid\Phalcon\ForwardExceptions
-=============================
+# `Sid\Phalcon\ForwardExceptions`
 
 Forward Exceptions within a Phalcon controller to an action of your choosing.
 
