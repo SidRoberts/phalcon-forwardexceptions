@@ -2,7 +2,6 @@
 
 namespace Tests;
 
-use Exception;
 use Phalcon\Di\FactoryDefault;
 use Phalcon\Mvc\Dispatcher;
 
