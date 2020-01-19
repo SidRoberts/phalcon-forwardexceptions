@@ -4,11 +4,11 @@ namespace Sid\Phalcon\ForwardExceptions;
 
 use Closure;
 use Exception;
-use Phalcon\DispatcherInterface;
+use Phalcon\Dispatcher\DispatcherInterface;
 use Phalcon\Events\Event as PhalconEvent;
-use Phalcon\Mvc\User\Plugin;
+use Phalcon\Di\Injectable;
 
-class Event extends Plugin
+class Event extends Injectable
 {
     /**
      * @var array
