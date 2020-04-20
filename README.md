@@ -4,7 +4,7 @@ Forward Exceptions within a Phalcon controller to an action of your choosing.
 
 
 
-[![Build Status](https://img.shields.io/travis/SidRoberts/phalcon-forwardexceptions/master.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/phalcon-forwardexceptions)
+[![Build Status](https://img.shields.io/travis/SidRoberts/phalcon-forwardexceptions/1.0.x.svg?style=for-the-badge)](https://travis-ci.org/SidRoberts/phalcon-forwardexceptions)
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/SidRoberts/phalcon-forwardexceptions.svg?style=for-the-badge)](https://github.com/SidRoberts/phalcon-forwardexceptions/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SidRoberts/phalcon-forwardexceptions.svg?style=for-the-badge)](https://github.com/SidRoberts/phalcon-forwardexceptions/pulls)
@@ -18,7 +18,7 @@ Install using Composer:
 ```json
 {
     "require": {
-        "sidroberts/phalcon-forwardexceptions": "dev-master"
+        "sidroberts/phalcon-forwardexceptions": "~1.0"
     }
 }
 ```
